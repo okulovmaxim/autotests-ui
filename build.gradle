@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "8.10"
+    id "io.qameta.allure" version "2.12.0"
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.18.0'
+    testImplementation 'org.aeonbits.owner:owner:1.0.4'
+    testImplementation 'org.testng:testng:7.7.0'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.assertj:assertj-core:3.26.3'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.26.0'
+}
+
+tasks.register("testNGRun", Test.class){
+    useTestNG()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    environment "host", System.getProperty("host")
+}
