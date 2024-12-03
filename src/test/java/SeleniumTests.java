@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ public class SeleniumTests {
 
     @BeforeSuite
     public static void downloadDriver() {
-
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeMethod
