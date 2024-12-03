@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    private WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeSuite
     public static void downloadDriver() {
