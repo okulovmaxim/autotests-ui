@@ -8,6 +8,6 @@ public class WbTests extends BaseTest {
     @Test
     public void searchResultTest() {
         driver.findElement(By.xpath("ssss"));
-        driver.get("google.com");
+        driver.get("google.com")1111;
     }
 }
