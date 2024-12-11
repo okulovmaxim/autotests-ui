@@ -2,11 +2,14 @@ package wildberries;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import wildberries.pages.MainPage;
 
 public class WbTests extends BaseTest {
 
     @Test
     public void searchResultTest() {
-        System.out.println(driver.getTitle());
+        String expectedItem = "iPhone";
+        MainPage mainPage = new MainPage(driver);
+        mainPage.searchItem(expectedItem);
     }
 }

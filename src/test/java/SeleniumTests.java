@@ -25,7 +25,7 @@ public class SeleniumTests {
 
     @BeforeSuite
     public static void downloadDriver() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
     }
 
     @BeforeMethod
