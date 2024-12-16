@@ -20,4 +20,6 @@ public class MainPage {
         driver.findElement(fieldSearch).sendKeys(item);
         driver.findElement(fieldSearch).sendKeys(Keys.ENTER);
     }
+
+
 }
