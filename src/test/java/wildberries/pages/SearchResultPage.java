@@ -18,7 +18,6 @@ public class SearchResultPage {
 
     public void openItem() {
         driver.findElements(items).get(0).click();
-        
     }
 
     public void openFilters() {

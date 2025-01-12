@@ -20,5 +20,6 @@ public class WbTests extends BaseTest {
         resultPage.setMinPrice(expectedMinPrice);
         resultPage.setMaxPrice(expectedMaxPrice);
         resultPage.applyFilters();
+        resultPage.openItem();
     }
 }
